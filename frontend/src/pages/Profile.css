@@ -6,6 +6,24 @@
   animation: fadeIn 0.3s ease;
 }
 
+.btn.outline {
+  background-color: transparent;
+  border: 1px solid var(--text-color-light);
+  color: var(--text-color-light);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.btn.outline:hover {
+  border-color: var(--text-color);
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .btn.danger {
   background-color: transparent;
   border: 1px solid var(--text-color-light);
@@ -396,7 +414,7 @@
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.07);
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--text-color-light);
   outline: none;
   font-family: inherit;
   font-size: 0.9rem;
@@ -521,7 +539,7 @@
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.07);
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--text-color-light);
   outline: none;
   font-family: inherit;
   font-size: 0.9rem;

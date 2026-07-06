@@ -75,7 +75,7 @@
   flex-grow: 1;
   background: transparent;
   border: none;
-  color: var(--text-color);
+  color: var(--text-color-light);
   font-family: inherit;
   font-size: 1rem;
   outline: none;
