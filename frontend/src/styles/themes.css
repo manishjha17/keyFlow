@@ -44,11 +44,11 @@
 
 [data-theme='void'] {
   --bg-color: #000000;
-  --text-color: #444444;
+  --text-color: #888888;
   --main-color: #eeeeee;
   --caret-color: #eeeeee;
   --sub-color: #111111;
-  --text-color-light: #aaaaaa;
+  --text-color-light: #cccccc;
   --error-color: #ff3333;
   --error-extra-color: #aa0000;
 }
