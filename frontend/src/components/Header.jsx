@@ -59,7 +59,7 @@ function Header() {
               />
               <span>{user.username}</span>
             </Link>
-            <button onClick={handleLogout} className="nav-item flex-center">
+            <button onClick={handleLogout} className="nav-item flex-center logout-btn">
               <LogOut size={16} />
             </button>
           </>

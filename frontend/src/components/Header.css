@@ -85,6 +85,10 @@
   color: var(--text-color);
 }
 
+.logout-btn:hover {
+  color: #ff6b6b; /* Light red */
+}
+
 .stat-pill {
   display: flex;
   align-items: center;
