@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const Score = require('../models/Score');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -134,6 +135,27 @@ exports.updateUserProfile = async (req, res) => {
     }
   } catch (error) {
     console.error('Error in updateUserProfile:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+exports.deleteUserProfile = async (req, res) => {
+  try {
+    const userId = req.user._id;
+
+    // Delete all scores associated with the user
+    await Score.deleteMany({ user: userId });
+
+    // Delete the user record
+    const userDeleted = await User.findByIdAndDelete(userId);
+
+    if (userDeleted) {
+      res.json({ message: 'User account and all related data deleted successfully' });
+    } else {
+      res.status(404).json({ message: 'User not found' });
+    }
+  } catch (error) {
+    console.error('Error in deleteUserProfile:', error);
     res.status(500).json({ message: 'Server error' });
   }
 };

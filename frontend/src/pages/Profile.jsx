@@ -20,7 +20,7 @@ const formatDate = (dateString) => {
 };
 
 function Profile() {
-  const { user, updateUser } = useContext(AuthContext);
+  const { user, updateUser, logout } = useContext(AuthContext);
   const navigate = useNavigate();
   const [scores, setScores] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -101,6 +101,35 @@ function Profile() {
       doResetAnalytics
     );
   };
+
+  const doDeleteAccount = async () => {
+    closeConfirm();
+    try {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+      const response = await fetch(`${API_URL}/auth/profile`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${user.token}` }
+      });
+      if (response.ok) {
+        logout();
+        navigate('/login');
+      } else {
+        const data = await response.json();
+        alert(data.message || 'Failed to delete account');
+      }
+    } catch (error) {
+      console.error('Error deleting account:', error);
+      alert('Server error occurred while deleting account');
+    }
+  };
+
+  const handleDeleteAccount = () => {
+    showConfirm(
+      'Are you sure you want to delete your account? This will permanently delete your profile, stats, and all associated data. This action CANNOT be undone.',
+      doDeleteAccount
+    );
+  };
+
 
   const handleEditSubmit = async (e) => {
     e.preventDefault();
@@ -294,6 +323,9 @@ function Profile() {
           </button>
           <button className="btn outline danger" onClick={handleResetAnalytics}>
             <Trash2 size={16} style={{ marginRight: '8px' }} /> Reset Analytics
+          </button>
+          <button className="btn outline danger" onClick={handleDeleteAccount}>
+            <Trash2 size={16} style={{ marginRight: '8px' }} /> Delete Account
           </button>
         </div>
       </div>
