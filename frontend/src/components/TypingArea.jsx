@@ -763,7 +763,7 @@ function TypingArea() {
 
         {!isFocused && status !== 'finished' && (
           <div className="focus-overlay">
-            Click here or press any key to focus
+            Click to focus
           </div>
         )}
 
