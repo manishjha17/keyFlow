@@ -15,7 +15,7 @@ export const ThemeContext = createContext();
 function App() {
   const validThemes = ['obsidian-gold', 'solar-eclipse', 'abyssal-blue', 'arctic-breeze', 'void', 'vampire-night', 'neon-jungle', 'cyber-hacker', 'retro-wave', 'twilight-blush', 'graphite', 'vintage-dos', 'paper-white'];
   const storedTheme = localStorage.getItem('theme');
-  const [theme, setTheme] = useState(validThemes.includes(storedTheme) ? storedTheme : 'obsidian-gold');
+  const [theme, setTheme] = useState(validThemes.includes(storedTheme) ? storedTheme : 'void');
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
