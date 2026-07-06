@@ -1,0 +1,153 @@
+:root, [data-theme='obsidian-gold'] {
+  --bg-color: #212121;
+  --text-color: #616161;
+  --main-color: #FFB300; 
+  --caret-color: #FFB300;
+  --sub-color: #424242;
+  --text-color-light: #BDBDBD;
+  --error-color: #F44336;
+  --error-extra-color: #D32F2F;
+}
+
+[data-theme='solar-eclipse'] {
+  --bg-color: #323437;
+  --text-color: #646669;
+  --main-color: #e2b714;
+  --caret-color: #e2b714;
+  --sub-color: #2c2e31;
+  --text-color-light: #d1d0c5;
+  --error-color: #ca4754;
+  --error-extra-color: #7e2a33;
+}
+
+[data-theme='abyssal-blue'] {
+  --bg-color: #0f172a;
+  --text-color: #475569;
+  --main-color: #38bdf8;
+  --caret-color: #38bdf8;
+  --sub-color: #1e293b;
+  --text-color-light: #cbd5e1;
+  --error-color: #ef4444;
+  --error-extra-color: #991b1b;
+}
+
+[data-theme='arctic-breeze'] {
+  --bg-color: #2e3440;
+  --text-color: #4c566a;
+  --main-color: #88c0d0;
+  --caret-color: #88c0d0;
+  --sub-color: #3b4252;
+  --text-color-light: #d8dee9;
+  --error-color: #bf616a;
+  --error-extra-color: #8c3b44;
+}
+
+[data-theme='void'] {
+  --bg-color: #000000;
+  --text-color: #444444;
+  --main-color: #eeeeee;
+  --caret-color: #eeeeee;
+  --sub-color: #111111;
+  --text-color-light: #aaaaaa;
+  --error-color: #ff3333;
+  --error-extra-color: #aa0000;
+}
+
+[data-theme='vampire-night'] {
+  --bg-color: #282a36;
+  --text-color: #6272a4;
+  --main-color: #ff79c6;
+  --caret-color: #ff79c6;
+  --sub-color: #44475a;
+  --text-color-light: #f8f8f2;
+  --error-color: #ff5555;
+  --error-extra-color: #ff0000;
+}
+
+[data-theme='neon-jungle'] {
+  --bg-color: #272822;
+  --text-color: #75715e;
+  --main-color: #a6e22e;
+  --caret-color: #a6e22e;
+  --sub-color: #3e3d32;
+  --text-color-light: #f8f8f2;
+  --error-color: #f92672;
+  --error-extra-color: #a11445;
+}
+
+[data-theme='cyber-hacker'] {
+  --bg-color: #000000;
+  --text-color: #004400;
+  --main-color: #00ff00;
+  --caret-color: #00ff00;
+  --sub-color: #001100;
+  --text-color-light: #008800;
+  --error-color: #ff0000;
+  --error-extra-color: #880000;
+}
+
+[data-theme='retro-wave'] {
+  --bg-color: #2b213a;
+  --text-color: #453761;
+  --main-color: #f92aad;
+  --caret-color: #f92aad;
+  --sub-color: #1f182b;
+  --text-color-light: #f8f8f2;
+  --error-color: #ff5555;
+  --error-extra-color: #aa0000;
+}
+
+[data-theme='twilight-blush'] {
+  --bg-color: #191724;
+  --text-color: #6e6a86;
+  --main-color: #ebbcba;
+  --caret-color: #ebbcba;
+  --sub-color: #26233a;
+  --text-color-light: #e0def4;
+  --error-color: #eb6f92;
+  --error-extra-color: #b3546e;
+}
+
+[data-theme='graphite'] {
+  --bg-color: #313131;
+  --text-color: #616161;
+  --main-color: #f3f3f3;
+  --caret-color: #f3f3f3;
+  --sub-color: #424242;
+  --text-color-light: #8c8c8c;
+  --error-color: #ff4c4c;
+  --error-extra-color: #cc0000;
+}
+
+[data-theme='vintage-dos'] {
+  --bg-color: #191a1b;
+  --text-color: #4a5639;
+  --main-color: #79a617;
+  --caret-color: #79a617;
+  --sub-color: #222324;
+  --text-color-light: #e8e6e3;
+  --error-color: #d15637;
+  --error-extra-color: #a63f25;
+}
+
+[data-theme='paper-white'] {
+  --bg-color: #ffffff;
+  --text-color: #555555;
+  --main-color: #111111;
+  --caret-color: #111111;
+  --sub-color: #f0f0f0;
+  --text-color-light: #888888;
+  --error-color: #d32f2f;
+  --error-extra-color: #b71c1c;
+}
+
+/* Base utility classes for themes */
+.text-main {
+  color: var(--main-color);
+}
+.text-light {
+  color: var(--text-color-light);
+}
+.bg-sub {
+  background-color: var(--sub-color);
+}

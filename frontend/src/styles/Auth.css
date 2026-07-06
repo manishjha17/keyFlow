@@ -1,0 +1,130 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--bg-color); /* Same as body but we can use sub-color if we want */
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Override for bg-sub specifically for register just to show variation */
+.auth-card.bg-sub {
+  background-color: var(--sub-color);
+}
+
+.auth-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auth-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+.auth-error {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--error-color);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: var(--sub-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s;
+}
+
+.input-group.bg-bg {
+  background-color: var(--bg-color);
+}
+
+.input-group:focus-within {
+  box-shadow: 0 0 0 2px var(--main-color);
+}
+
+.input-icon {
+  color: var(--text-color-light);
+}
+
+.input-group input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: var(--text-color-light);
+  opacity: 0.5;
+}
+
+.auth-btn {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.auth-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.auth-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+}
+
+.auth-footer a {
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.auth-footer a:hover {
+  opacity: 0.8;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+}

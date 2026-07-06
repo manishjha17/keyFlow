@@ -1,0 +1,100 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.logo-icon-container {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-custom {
+  display: block;
+}
+
+.logo-hand-left {
+  transform-origin: 20px 80px;
+  animation: typeMotionLeft 0.5s infinite;
+}
+
+.logo-hand-right {
+  transform-origin: 80px 80px;
+  animation: typeMotionRight 0.6s infinite;
+}
+
+@keyframes typeMotionLeft {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-4px) rotate(5deg); }
+  50% { transform: translateY(-1px) rotate(-3deg); }
+  75% { transform: translateY(-3px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes typeMotionRight {
+  0% { transform: translateY(0) rotate(0deg); }
+  20% { transform: translateY(-2px) rotate(-2deg); }
+  45% { transform: translateY(-4px) rotate(4deg); }
+  70% { transform: translateY(1px) rotate(-1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.logo-finger-1 { animation: fingerTap 0.3s infinite alternate; }
+.logo-finger-2 { animation: fingerTap 0.4s infinite alternate 0.1s; }
+.logo-finger-3 { animation: fingerTap 0.35s infinite alternate 0.2s; }
+.logo-finger-4 { animation: fingerTap 0.45s infinite alternate 0.05s; }
+.logo-finger-5 { animation: fingerTap 0.38s infinite alternate 0.15s; }
+.logo-finger-6 { animation: fingerTap 0.42s infinite alternate 0.25s; }
+
+@keyframes fingerTap {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(3px); color: var(--main-color); stroke: var(--main-color); }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+}
+
+.nav-item {
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--text-color);
+}
+
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: inherit;
+}
